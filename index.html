@@ -3,81 +3,124 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Çığ Analizi Haritası</title>
+  <title>AsoLanche Kaçkar Dağları Çığ Analiz Haritası</title>
   <style>
-    /* Basit ama şık bir sayfa stili */
+    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
     body {
       margin: 0;
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #f0f4f8;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(135deg, #e0f7fa, #80deea);
       display: flex;
       flex-direction: column;
       min-height: 100vh;
+      color: #023e8a;
     }
+
     header {
-      background-color: #005f73;
+      background-color: #0077b6;
       color: white;
-      padding: 1rem 2rem;
+      padding: 1.5rem 2rem;
       text-align: center;
-      font-size: 1.8rem;
+      font-size: 2rem;
       font-weight: 700;
-      box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+      box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
     }
+
     main {
       flex: 1;
-      padding: 1rem 2rem;
+      padding: 2rem 3rem;
       max-width: 1200px;
       margin: auto;
       width: 100%;
       box-sizing: border-box;
+      background: rgba(255,255,255,0.85);
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
+
     h2 {
-      color: #0a9396;
-      margin-bottom: 1rem;
+      margin: 0;
       text-align: center;
-      font-weight: 600;
+      color: #0077b6;
+      font-weight: 700;
+      font-size: 1.8rem;
+      letter-spacing: 0.06em;
+      text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     }
+
+    p.description {
+      max-width: 700px;
+      margin: 0 auto;
+      text-align: center;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      color: #023e8add;
+    }
+
     iframe {
-      border-radius: 12px;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+      border-radius: 15px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       width: 100%;
-      height: 70vh;
-      min-height: 400px;
+      height: 75vh;
+      min-height: 450px;
       border: none;
       transition: box-shadow 0.3s ease;
     }
     iframe:hover {
-      box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+      box-shadow: 0 12px 40px rgba(0,0,0,0.35);
     }
+
     footer {
       text-align: center;
       padding: 1rem 2rem;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
       color: #555;
-      background-color: #e0e7ef;
-      margin-top: auto;
+      background-color: #caf0f8;
+      font-style: italic;
+      user-select: none;
+      letter-spacing: 0.04em;
     }
-    @media (max-width: 600px) {
-      header {
-        font-size: 1.4rem;
-        padding: 0.8rem 1rem;
-      }
+
+    @media (max-width: 768px) {
       main {
-        padding: 1rem;
+        padding: 1.5rem 1.5rem;
+      }
+      header {
+        font-size: 1.5rem;
+      }
+      h2 {
+        font-size: 1.4rem;
+      }
+      p.description {
+        font-size: 1rem;
       }
     }
   </style>
 </head>
 <body>
   <header>
-    Çığ Analizi Haritası
+    AsoLanche Kaçkar Dağları Çığ Analiz Haritası
   </header>
 
   <main>
-    <h2>Türkiye'deki Çığ Risk Haritası</h2>
+    <h2>Kaçkar Dağları Çığ Risk Haritası</h2>
+    <p class="description">
+      Bu harita, Kaçkar Dağları bölgesindeki çığ risk durumlarını interaktif olarak göstermektedir.<br />
+      Haritada işaretlenen noktalar ve renkler bölgedeki çığ tehlikesinin yoğunluğunu ifade eder.<br />
+      Harita üzerinde gezinerek riskli bölgeler hakkında detaylı bilgi edinebilirsiniz.
+    </p>
     <iframe 
-      src="https://api.mapbox.com/styles/v1/tufaniskuzar19/cmciue8kk000801s7dnwdehyp.html?title=false&access_token=pk.eyJ1IjoidHVmYW5pc2t1emFyMTkiLCJhIjoiY204OHF3YWNxMHM4bTJrcjd6aTBoYnRleCJ9.QXylYEa1FFVNUrlOJphWDg&zoomwheel=false#2/38/-34" 
-      title="Çığ Analizi Haritası">
+      width="100%" 
+      height="400px" 
+      src="https://api.mapbox.com/styles/v1/tufaniskuzar19/cmciue8kk000801s7dnwdehyp/draft.html?title=false&access_token=pk.eyJ1IjoidHVmYW5pc2t1emFyMTkiLCJhIjoiY204OHF3YWNxMHM4bTJrcjd6aTBoYnRleCJ9.QXylYEa1FFVNUrlOJphWDg&zoomwheel=false#10/40.922/41.093" 
+      title="Kaçkar Dağları Çığ Haritası" 
+      style="border:none;">
     </iframe>
   </main>
 
